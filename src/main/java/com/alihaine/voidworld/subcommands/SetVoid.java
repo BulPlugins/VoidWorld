@@ -1,13 +1,13 @@
 package com.alihaine.voidworld.subcommands;
 
 import com.alihaine.bulmultiverse.command.SubCommand;
-import org.bukkit.Material;
+import com.alihaine.voidworld.chunks.ChunkVoidMaker;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.List;
 
-public class SetBlock implements SubCommand {
+public class SetVoid implements SubCommand {
     @Override
     public void executor(CommandSender sender, List<String> list) {
         if (!(sender instanceof Player)) {
@@ -16,16 +16,16 @@ public class SetBlock implements SubCommand {
         }
 
         Player player = (Player) sender;
-        player.getLocation().getBlock().setType(Material.BEDROCK);
+        ChunkVoidMaker.MakeChunkVoid(player.getLocation().getChunk());
     }
 
     @Override
     public String getUsage() {
-        return "/bmv setblock";
+        return "/bmv setvoid";
     }
 
     @Override
     public String getDescription() {
-        return "Create a block at your position";
+        return "The chunk at your position will be void";
     }
 }

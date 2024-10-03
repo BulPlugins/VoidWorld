@@ -1,0 +1,6 @@
+# /!\ Check out the documentation before changing this
+enable_void_in_default_world: false
+default_world_min_y: -64
+default_world_max_y: 319
+
+enable_setblock_command: true
