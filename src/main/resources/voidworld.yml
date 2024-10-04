@@ -4,3 +4,4 @@ default_world_min_y: -64
 default_world_max_y: 319
 
 enable_setblock_command: true
+enable_chunk_void_maker_command: true
