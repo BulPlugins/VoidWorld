@@ -31,6 +31,11 @@ public class VoidWorld extends BulMultiverseAddon {
     }
 
     @Override
+    public void onEnableAfterWorldsLoad() {
+
+    }
+
+    @Override
     public void onDisable() {
         Bukkit.getConsoleSender().sendMessage("§c[BulMultiverse] Disable the addon VoidWorld");
     }
