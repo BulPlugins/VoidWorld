@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class VoidWorldFile {
 
-    private final VoidWorld voidWorldInstance = VoidWorld.voidWorld;
+    private final VoidWorld voidWorldInstance = VoidWorld.getVoidWorld();
     private final boolean voidInDefaultWorld;
     private final int defaultWorldMinY;
     private final int defaultWorldMaxY;
@@ -20,11 +20,7 @@ public class VoidWorldFile {
     public VoidWorldFile() {
         final File voidWorldFile;
         final FileConfiguration VoidWorldConfig;
-        try {
-            voidWorldFile = voidWorldInstance.createCustomFile("voidworld.yml", getClass().getClassLoader().getResourceAsStream("voidworld.yml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        voidWorldFile = voidWorldInstance.createCustomFile("voidworld.yml", getClass().getClassLoader().getResourceAsStream("voidworld.yml"));
 
         VoidWorldConfig = new YamlConfiguration();
         try {
