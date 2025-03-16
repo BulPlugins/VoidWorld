@@ -17,7 +17,7 @@ public class VoidWorld extends BulMultiverseAddon {
     private VoidWorldFile voidWorldFile;
 
     public VoidWorld() {
-        super("VoidWorld", Collections.singletonList("AliHaine"), Collections.singletonList("https://www.spigotmc.org/resources/addon-voidworld.119020/"), "https://discord.com/invite/wxnTV68dX2");
+        super("VoidWorld", Collections.singletonList("AliHaine"), Collections.singletonList("https://www.spigotmc.org/resources/119020/"), "https://discord.com/invite/wxnTV68dX2");
     }
 
     @Override
