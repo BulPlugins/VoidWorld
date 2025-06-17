@@ -2,11 +2,11 @@ package com.alihaine.voidworld;
 
 import com.alihaine.bulmultiverse.BulMultiverse;
 import com.alihaine.bulmultiverse.addon.BulMultiverseAddon;
+import com.alihaine.voidworld.commands.SetBlockCommand;
+import com.alihaine.voidworld.commands.SetVoidCommand;
 import com.alihaine.voidworld.file.VoidWorldFile;
 import com.alihaine.voidworld.listener.OnChunkLoad;
 import com.alihaine.voidworld.options.Chunk;
-import com.alihaine.voidworld.subcommands.SetBlock;
-import com.alihaine.voidworld.subcommands.SetVoid;
 import org.bukkit.Bukkit;
 
 import java.util.Collections;
@@ -28,18 +28,16 @@ public class VoidWorld extends BulMultiverseAddon {
 
         new Chunk();
         if (voidWorldFile.isEnableSetBlockCmd())
-            BulMultiverse.getBulMultiverse().getBMV().addCommand("setblock", new SetBlock());
+            BulMultiverse.getBulMultiverse().registerCommand(new SetBlockCommand());
         if (voidWorldFile.isEnableChunkVoidCmd())
-            BulMultiverse.getBulMultiverse().getBMV().addCommand("setvoid", new SetVoid());
+            BulMultiverse.getBulMultiverse().registerCommand(new SetVoidCommand());
         if (voidWorldFile.isVoidInDefaultWorld())
             BulMultiverse.getBulMultiverse().getServer().getPluginManager().registerEvents(new OnChunkLoad(), BulMultiverse.getBulMultiverse());
         Bukkit.getConsoleSender().sendMessage("§e[BulMultiverse] §aEnable the addon VoidWorld");
     }
 
     @Override
-    public void onEnableAfterWorldsLoad() {
-
-    }
+    public void onEnableAfterWorldsLoad() {}
 
     @Override
     public void onDisable() {
