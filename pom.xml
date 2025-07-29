@@ -6,7 +6,7 @@
 
     <groupId>com.addonvoidworld</groupId>
     <artifactId>VoidWorld</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -15,6 +15,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>dev.aliyag</groupId>
+            <artifactId>BulMultiverse</artifactId>
+            <version>1.1</version>
+        </dependency>
+
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
@@ -26,13 +32,6 @@
             <artifactId>bstats-bukkit</artifactId>
             <version>3.0.2</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.sample</groupId>
-            <artifactId>sample</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/BulMultiverse-0.14.jar</systemPath>
         </dependency>
     </dependencies>
 
